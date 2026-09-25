@@ -140,7 +140,7 @@ The merged dataset (`data/combined_dataset_3k.jsonl`, pilot + expansion concaten
 
 - **3,230 rows**, all conforming to the Alpaca template and Pydantic schema (0 corrupted)
 - Split 90/10 by `data/split_dataset.py` (seed 42): **2,907 train / 323 eval**
-- Hallucination flag: **1,714 True / 1,516 False** — HaluBench's PASS/FAIL labels balance the *inputs*, but the teacher's hallucination judgment does not map 1:1 onto them
+- Hallucination flag: **1,714 True / 1,516 False** — HaluBench's PASS/FAIL labels balance the *inputs*.
 - Score distributions: `context_relevance` is top-heavy (87% fives — retrieved passages are usually on-topic even when answers hallucinate), `groundedness` is bimodal (peaks at 1 and 5), `answer_relevance` spreads across all of 1–5
 - Strong internal consistency: `hallucination_flag=true` concentrates in groundedness scores 1–2 (839 + 583 rows), while `flag=false` concentrates at 5 (1,307 rows)
 
